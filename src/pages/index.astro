@@ -1,0 +1,128 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Badge from "@/components/Badge.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import CopyIcon from "@/components/icons/Copy.astro"
+import Plus from "@/components/icons/Plus.astro"
+import PDFIcon from "@/components/icons/PDF.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import BlogIcon from "@/components/icons/BlogIcon.astro"
+import Blog from "@/components/Blog.astro"
+---
+
+<Layout
+  title="MariomgFIT"
+  description="Contrata a Mario Martín para crear tu aplicación web o móvil. Desarrollador Web."
+>
+  <main class="px-4">
+    <SectionContainer class="py-24 pb-32">
+      <img
+        class="rounded-full size-44 mb-4"
+        src="/MariomgFit/marioCircled.png"
+        alt="Mario photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Mario Martín <a
+          href="https://www.linkedin.com/in/mario-martin-godoy/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center hover:scale-105 transition"
+        >
+          <Badge>Actualmente en Stiga CX</Badge>
+        </a>
+      </h1>
+      <h2
+        class="text-xl lg:text-2xl text-balance max-w-[700px] text-white"
+      >
+        <span>Entrenador personal de deportistas.</span><span
+          class="text-yellow-200"
+        ><br>
+          Enfoque en aumento de masa muscular.</span
+        >
+        <br><span class="text-red-200">
+          De Madrid, España</span
+        >.<br>
+        <span class="text-sky-200"
+          >Juntos conseguiremos tu físico soñado.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/mario-martin-godoy/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Marioby9">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill id="mail" style="cursor: pointer">
+          <CopyIcon class="size-4 md:size-6" />
+          mmartin.mrmg@gmail.com
+        </SocialPill>
+        <SocialPill href="/MariomgFit/curriculumDEV.pdf">
+          <PDFIcon class="size-4 md:size-6" />
+          CV
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos principales
+      </h2>
+      <Projects />
+      <div class="flex justify-center mt-16 text-gray-400">
+        <a href="/MariomgFit/Projects" class="flex gap-3 hover:scale-105 transition">
+          <Plus class="size-6 text-gray-400" />
+          Ver más proyectos
+        </a>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <ProfileCheck class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="blog">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+      >
+        <BlogIcon class="size-7" />
+        Blog
+      </h2>
+      <Blog/>
+    </SectionContainer>
+  </main>
+  <script src="/src/components/Clipboard.js"></script>
+</Layout>
